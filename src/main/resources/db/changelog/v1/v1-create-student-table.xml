@@ -23,7 +23,31 @@
     </changeSet>
 
     <changeSet id="v1-2" author="Kulikov Pavel">
-        <loadData tableName="student" file="db/data/student/data.csv"/>
+        <loadData tableName="student" file="db/data/student/v1-1-data.csv"/>
     </changeSet>
 
+    <changeSet id="v1-3" author="Kulikov Pavel">
+        <addAutoIncrement tableName="student" columnName="id" startWith="5"/>
+    </changeSet>
+
+    <changeSet id="v1-4" author="Kulikov Pavel">
+        <loadData tableName="student" file="db/data/student/v1-2-data.csv"/>
+    </changeSet>
+
+    <changeSet id="v1-5" author="Kulikov Pavel">
+        <delete tableName="student">
+            <where>
+                id in(0,4)
+            </where>
+        </delete>
+    </changeSet>
+
+    <changeSet id="v1-6" author="Kulikov Pavel">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT  COUNT(*) FROM student WHERE id = 3;
+            </sqlCheck>
+        </preConditions>
+        <loadData tableName="student" file="db/data/student/v1-3-data.csv"/>
+    </changeSet>
 </databaseChangeLog>
