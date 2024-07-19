@@ -22,4 +22,8 @@
         </createTable>
     </changeSet>
 
+    <changeSet id="v1-2" author="Kulikov Pavel">
+        <loadData tableName="student" file="db/data/student/data.csv"/>
+    </changeSet>
+
 </databaseChangeLog>
