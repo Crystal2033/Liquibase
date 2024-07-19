@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--This is our main -->
 <databaseChangeLog
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--This is our entry point of liquibase. This file should include all accumulate changelog files.-->
 
     <include file="v1/v1-accumulate-changelog.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>

@@ -4,6 +4,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
 
+    <!--This is changelog file. One changelog can consist a lot of changesets-->
     <changeSet id="v1-1" author="Kulikov Pavel">
         <createTable tableName="student">
             <column name="id" type="bigint">
